@@ -48,4 +48,24 @@ footer li {
     width: 100%;
     height: 50vh;
 }
+
+.border-right {
+    border-right: 1px solid black!important;
+}
+
   
+@media (max-width: 700px) {
+    .mobile-bike{
+      margin-top: 10px;
+      margin-left: -30px;
+      text-align: center;   
+      padding-left: 0px;
+    padding-right: 0px;   
+    }
+    .wd-img{
+     width: 70px;
+    }
+}
+.mt-5, .my-5 {
+    margin-top: 0rem!important;
+}

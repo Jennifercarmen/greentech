@@ -60,7 +60,7 @@
       user = result.user;
       console.log(user);
       initApp();
-      window.location.href = 'main.html';
+      window.location.href = 'home.html';
     });
   }
   var $logout = $('.logout');
