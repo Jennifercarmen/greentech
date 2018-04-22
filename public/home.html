@@ -17,18 +17,7 @@
 	<!--========= HEADER ==========-->
 	<header class="bg-red">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light bg-red">
-			<img src="assets/icons/b-icon.png" alt="Bicycle" class="bicycle-icon" width="10%">
-			
-			<!-- <div class="text-center">
-			<button class="navbar-toggler rounded-circle" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-			 aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<!-- <div class="|">
-				<i class="fas fa-star"></i>
-				<br>
-				<span>001</span>
-			</div> -->
+			<img src="assets/icons/b-icon.png" alt="Bicycle" class="bicycle-icon">
 			<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
 			 aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -36,17 +25,17 @@
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav text-white text-center nav-w-100">
 					<div class="row nav-w-100 d-flex justify-content-between">
-					<a class="nav-item nav-link active text-white  ml-4" href="#">HOME
-						<span class="sr-only">(current)</span>
-					</a>
-					<a class="nav-item nav-link text-white" href="#">TECNICOS</a>
-					<a class="nav-item nav-link text-white" href="#">INFO VIAL</a>
-					<a class="nav-item nav-link text-white" href="#">TIPS PARA NOOBS</a>
-					<a class="nav-item nav-link text-white" href="#">PARQUEO BIKE</a>
-					<a class="nav-item nav-link text-white" href="#">GUIA POR VOZ</a>
-					<a class="nav-item nav-link text-white" href="#">PUNTOS</a>
-					<a class=" nav-item nav-link text-white" href="#">ALQUILER</a>
-				</div>
+						<a class="nav-item nav-link active text-white" href="#">HOME
+							<span class="sr-only">(current)</span>
+						</a>
+						<a class="nav-item nav-link text-white" href="#">TECNICOS</a>
+						<a class="nav-item nav-link text-white" href="#">INFO VIAL</a>
+						<a class="nav-item nav-link text-white" href="#">TIPS PARA NOOBS</a>
+						<a class="nav-item nav-link text-white" href="#">PARQUEO BIKE</a>
+						<a class="nav-item nav-link text-white" href="#">GUIA POR VOZ</a>
+						<a class="nav-item nav-link text-white" href="#">PUNTOS</a>
+						<a class="nav-item nav-link text-white" href="#">ALQUILER</a>
+					</div>
 				</div>
 			</div>
 		</nav>
@@ -54,72 +43,82 @@
 	<!--========= MAIN ==========-->
 	<main class="container">
 
-	<div class="row mt-3">
-		<div class="col-md-4 mb-3 col-10 offset-1">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<span class="input-group-text" id="inputGroupPrepend2"><img src="assets/icons/point.png" class="img-input"></span>
+		<div class="row mt-3">
+			<div class="col-md-4 mb-3 col-10 offset-1">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="inputGroupPrepend2">
+							<img src="assets/icons/point.png" class="img-input">
+						</span>
+					</div>
+					<input type="text" class="form-control" id="input_going" placeholder="Ingresa origen" aria-describedby="inputGroupPrepend2"
+					 required>
 				</div>
-				<input type="text" class="form-control" id="input_going" placeholder="Ingresa origen" aria-describedby="inputGroupPrepend2"
-				 required>
+			</div>
+			<div class="col-md-4 mb-3 col-10 offset-1">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="inputGroupPrepend2">
+							<img src="assets/icons/market.png" class="img-input">
+						</span>
+					</div>
+					<input type="text" class="form-control" id="input_destiny" placeholder="Ingresa destino" aria-describedby="inputGroupPrepend2"
+					 required>
+				</div>
 			</div>
 		</div>
-		<div class="col-md-4 mb-3 col-10 offset-1">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<span class="input-group-text" id="inputGroupPrepend2"><img src="assets/icons/market.png" class="img-input"></span>
-				</div>
-				<input type="text" class="form-control" id="input_destiny" placeholder="Ingresa destino" aria-describedby="inputGroupPrepend2"
-				 required>
+		<div class="row mb-4 d-flex justify-content-center ml-3-css">
+			<div class="col col-lg-1 col-4 mobile-bike">
+				<img class="wd-img" id="estacionamiento" src="assets/image/img1.png" alt="estacionamiento">
+			</div>
+			<div class="col-md-auto col-4 mobile-bike">
+				<a href="">
+					<img class="wd-img" src="assets/image/img2.png" alt="servicio tecnico">
+				</a>
+			</div>
+			<div class="col col-lg-1 col-4  mobile-bike">
+				<a href="">
+					<img class="wd-img" src="assets/image/img3.png" alt="bici disponible">
+				</a>
 			</div>
 		</div>
-		<div class="col-md-4 mb-3 col-10 offset-1">
-			<div class="input-group">
+			<div class="input-group d-flex justify-content-center mb-4">
 				<button class="btn waves-effect waves-light" id="trazar-ruta" disabled>
 					Trazar Ruta</button>
-			</div>
 		</div>
-	</div>
-	<div class="row mt-5 mb-5 -flex justify-content-center">
-        <div class="col col-lg-1 col-4 mobile-bike">
-           <img class="wd-img" id="estacionamiento" src="assets/image/img1.png" alt="estacionamiento">
-        </div>
-        <div class="col-md-auto col-4 mobile-bike">
-           <a href=""><img class="wd-img" src="assets/image/img2.png" alt="servicio tecnico"></a>
-        </div>
-        <div class="col col-lg-1 col-4   mobile-bike">
-          <a href=""><img class="wd-img" src="assets/image/img3.png" alt="bici disponible"></a>
-        </div>
-    </div>
-	
-	<div id="map"></div>
-	<div id="legend"><h3>Legend</h3></div>
+		<div id="map" class="mt-4 mb-4"></div>
 
 	</main>
 	<!--========= FOOTER ==========-->
-	<footer class="container bg-red p-0 position-absolute">
-	<ul class="d-flex justify-content-between mt-2 mb-2">
-		<li class="border-right col-4">
-			<img src="assets/icons/router-icon.png" alt="Router-icon">
-		</li>
-		<li class="border-right col-4">
-			<img src="assets/icons/micro-icon.png" alt="Router-icon">
-		</li>
-		<li class="col-4">
-			<img src="assets/icons/info-icon.png" alt="Router-icon">
-		</li>
-	</ul>
-</footer>
+	<footer class="container-fluid bg-red p-0 m-0">
+		<ul class="d-flex justify-content-between m-0">
+			<li class="border-right col-4 col-md-4 d-flex justify-content-center">
+				<a href="">
+					<img src="assets/icons/router-icon.png" alt="Router-icon">
+				</a>
+			</li>
+			<li class="border-right col-4 col-md-4 d-flex justify-content-center">
+				<a href="">
+					<img src="assets/icons/micro-icon.png" alt="Router-icon">
+				</a>
+			</li>
+			<li class="col-4 col-md-4 d-flex justify-content-center">
+				<a href="https://marvelapp.com/3dhgjah/screen/41588172" target="_blank">
+					<img src="assets/icons/info-icon.png" alt="Router-icon">
+				</a>
+			</li>
+		</ul>
+	</footer>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 	 crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
 	 crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
 	 crossorigin="anonymous"></script>
-	 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4C7p-SUpGda5c4bmHN7MTtBSDnhRpWGQ&callback=initMap&libraries=places"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4C7p-SUpGda5c4bmHN7MTtBSDnhRpWGQ&callback=initMap&libraries=places"></script>
 
 
-		<script src="js/home.js"></script>
+	<script src="js/home.js"></script>
 </body>
 
 </html>

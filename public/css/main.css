@@ -86,39 +86,60 @@ footer{
 }
 
 footer img {
-    width: 5rem;
+    width: 4rem;
+    height: 4rem;
 }   
   
 @media (max-width: 700px) {
     .mobile-bike{
-      margin-top: 10px;
-      margin-left: -30px;
-      text-align: center;   
-      padding-left: 0px;
-    padding-right: 0px;   
+        margin-top: 10px;
+        margin-left: -30px;
+        text-align: center;   
+        padding-left: 0px;
+        padding-right: 0px;   
     }
-    .wd-img{
-     width: 70px;
-    }
-}
-.mt-5, .my-5 {
-    margin-top: 0rem!important;
 
+    .wd-img{
+        width: 50px;
+    }
+
+    #navbarNavAltMarkup a {
+        width: 100%;
+    }
+    .ml-3-css{
+        margin-left: 1rem!important;
+    }
 }
+
 
 @media (min-width: 700px) {
     .bicycle-icon{
-        width: 70px;
+        width: 60px;
     }
+
     .nav-w-100 {
-        width: 100%!important;
-    }
-    /* #navbarNavAltMarkup{
+        width: 95%!important;
         position: absolute;
+        right: 1rem;
+        bottom: 0.7rem;
+    }
+
+    #navbarNavAltMarkup a {
+        font-size: 0.9rem;
+    }
+
+    #navbarNavAltMarkup a:hover {
+        background-color: rgba(189, 89, 93, 0.384);
+    }
+
+    footer{
         right: 0;
-    } */
-    a .nav-item:hover {
-        background-color: rgba(222, 30, 36, 0.384);
+    }
+    .wd-img{
+        width: 60px;
+    }
+    .ml-3-css{
+        margin-left: 0!important;
     }
 }
 #legend {
