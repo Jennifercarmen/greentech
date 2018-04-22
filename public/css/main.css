@@ -45,10 +45,7 @@ footer li {
     background-color: #DE1E26!important;
 }
 
-#map {
-    width: 100%;
-    height: 40vh;
-}
+
 
 .border-right {
     border-right: 1px solid black!important;
@@ -100,7 +97,7 @@ footer img {
     }
 
     .wd-img{
-        width: 50px;
+        width: 70px;
     }
 
     #navbarNavAltMarkup a {
@@ -142,12 +139,18 @@ footer img {
         margin-left: 0!important;
     }
 }
-#legend {
+#map {
+    height: 400px;
+    width: 100%;
+  }
+  #legend {
     font-family: Arial, sans-serif;
     background: #fff;
     padding: 10px;
     margin: 10px;
     border: 3px solid #000;
+    position: absolute;
+    top: 650px;
   }
   #legend h3 {
     margin-top: 0;
@@ -155,3 +158,10 @@ footer img {
   #legend img {
     vertical-align: middle;
   }
+  .map-icon-label .map-icon {
+	font-size: 24px;
+	color: #FFFFFF;
+	line-height: 48px;
+	text-align: center;
+	white-space: nowrap;
+}
