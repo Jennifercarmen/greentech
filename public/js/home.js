@@ -4,8 +4,6 @@ var markroute = document.getElementById('trazar-ruta');
 var findMe = document.getElementById('findMe');
 var btntraceroute = document.getElementById('trazar-ruta');
 var btnEstacion = document.getElementById('estacionamiento');
-
-
 // validar input
 var validateButton = function validateButton() {
     var partida = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : inputPartida;
@@ -122,23 +120,35 @@ var calculateAndDisplayRoute = function calculateAndDisplayRoute(directionsServi
 // Buscar estacionamientos
 function buscarEstacionamientos() {
     // Creamos un mapa con las coordenadas actuales
-
     lat = -12.0463731;
     lon = -77.042754;
-
     var myLatlng = new google.maps.LatLng(lat, lon);
-
     var mapOptions = {
         center: myLatlng,
         zoom: 12,
         mapTypeId: google.maps.MapTypeId.MAPA
     };
+    var icons = {
+        parking: {
+          name: 'Parking',
+          icon: iconBase + 'parking_lot_maps.png'
+        }
+      };
+      var iconBase="https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png";
+
+      var legend = document.getElementById('legend');
+      for (var key in icons) {
+        var type = icons[key];
+        var name = type.name;
+        var icon = type.icon;
+        var div = document.createElement('div');
+        div.innerHTML = '<img src="' + iconBase + '"> ' + name;
+        legend.appendChild(div);
+      }
 
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
     // Creamos el infowindow
     infowindow = new google.maps.InfoWindow();
-
     // Especificamos la localización, el radio y el tipo de lugares que queremos obtener
     var request = {
         location: myLatlng,
@@ -149,21 +159,21 @@ function buscarEstacionamientos() {
     // Creamos el servicio PlaceService y enviamos la petición.
     var service = new google.maps.places.PlacesService(map);
 
-
     service.textSearch(request, function (results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             for (var i = 0; i < results.length; i++) {
-                crearMarcador(results[i]);
+                crearMarcador(results[i],iconBase);
             }
         }
 
     });
 }
-function crearMarcador(place) {
+function crearMarcador(place,img) {
     // Creamos un marcador
     var marker = new google.maps.Marker({
         map: map,
-        position: place.geometry.location
+        position: place.geometry.location,
+        icon: img
     });
 
     // Asignamos el evento click del marcador
