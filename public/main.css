@@ -17,4 +17,6 @@
     background-position: center center;
     opacity: 1;
    }
-   
+   .row.redes {
+    margin-top: -40px;
+}

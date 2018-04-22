@@ -9,29 +9,59 @@
     messagingSenderId: "1072734014511"
   };
   firebase.initializeApp(config);
-
+  
   var btnGoogle = $('#btnGoogle');
   var btnFacebook = $('#btnFacebook'); 
-
-  btnGoogle.on('click',function google() {
-      alert('aahshsh');
-      var provider = new firebase.auth.GoogleAuthProvider();
-      firebase.auth().signInWithPopup(provider).then(function(result) {
-        user = result.user;
-        console.log(user);  
-        window.location.href = 'home.html';
-      });
-   });
-
-   btnFacebook.on('click',function facebook() {
-     alert('s');
-     var provider = new firebase.auth.FacebookAuthProvider();
-     firebase.auth().signInWithPopup(provider).then(function(result) {
-     user = result.user;
-     console.log(user);
-    
-       window.location.href = 'home.html';
-  });
-     
-   })
+  var user = null;
+  var usuariosConectados = null;
+  var usuarios = null;
   
+  var database = firebase.database();
+  var conectadoKey = '';
+  btnFacebook.on('click', signInFacebook);
+  
+  btnGoogle.on('click', signInGoogle);
+  function initApp() {
+    registrationUsers(user.uid, user.displayName, user.email,user.photoURL);
+    login(user.uid, user.displayName , user.email);
+    window.location.href = 'home.html';  
+  }
+  function registrationUsers(uid, name, email,photoURL) {
+      firebase.database().ref('Usuarios/' + uid).set({
+      name: name,
+      email: email,
+      photoURL:photoURL
+    });
+  }
+  function login(uid, name, email) {
+    firebase.database().ref('connected/' + uid).set({
+      name: name,
+      email: email
+    });
+  }
+  function signOut() {
+    firebase.auth().onAuthStateChanged(function(user) {
+      database.ref('/connected/' + user.uid).remove();
+      window.location.href = '../index.html';  
+    });
+  };
+  function signInFacebook() {
+    var provider = new firebase.auth.FacebookAuthProvider();
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+      user = result.user;
+      console.log(user);
+      initApp();
+    })
+  }
+  
+  function signInGoogle() {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+      user = result.user;
+      console.log(user);
+      initApp();
+      window.location.href = 'main.html';
+    });
+  }
+  var $logout = $('.logout');
+  $logout.on('click', signOut);
