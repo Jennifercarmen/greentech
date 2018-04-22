@@ -53,24 +53,14 @@
 	</header>
 	<!--========= MAIN ==========-->
 	<main class="container">
-    <div class="row mt-4 mb-4 d-flex justify-content-center">
-        <div class="col col-md-1 col-4 mobile-bike">
-           <a href=""><img class="wd-img" src="assets/image/img1.png" alt="estacionamiento"></a>
-        </div>
-        <div class="col-md-auto col-4 mobile-bike">
-           <a href=""><img class="wd-img" src="assets/image/img2.png" alt="servicio tecnico"></a>
-        </div>
-        <div class="col col-md-1 col-4   mobile-bike">
-          <a href=""><img class="wd-img" src="assets/image/img3.png" alt="bici disponible"></a>
-        </div>
-    </div>
-	<form class="row">
+
+	<div class="row mt-3">
 		<div class="col-md-4 mb-3 col-10 offset-1">
 			<div class="input-group">
 				<div class="input-group-prepend">
 					<span class="input-group-text" id="inputGroupPrepend2"><img src="assets/icons/point.png" class="img-input"></span>
 				</div>
-				<input type="text" class="form-control" id="validationDefaultUsername" placeholder="Ingresa origen" aria-describedby="inputGroupPrepend2"
+				<input type="text" class="form-control" id="input_going" placeholder="Ingresa origen" aria-describedby="inputGroupPrepend2"
 				 required>
 			</div>
 		</div>
@@ -79,15 +69,30 @@
 				<div class="input-group-prepend">
 					<span class="input-group-text" id="inputGroupPrepend2"><img src="assets/icons/market.png" class="img-input"></span>
 				</div>
-				<input type="text" class="form-control" id="validationDefaultUsername" placeholder="Ingresa destino" aria-describedby="inputGroupPrepend2"
+				<input type="text" class="form-control" id="input_destiny" placeholder="Ingresa destino" aria-describedby="inputGroupPrepend2"
 				 required>
 			</div>
 		</div>
-	</form>
-	<div class="row">
-		<div class="col-12"><div id="map"></div></div>
-	
+		<div class="col-md-4 mb-3 col-10 offset-1">
+			<div class="input-group">
+				<button class="btn waves-effect waves-light" id="trazar-ruta" disabled>
+					Trazar Ruta</button>
+			</div>
+		</div>
 	</div>
+	<div class="row mt-5 mb-5 -flex justify-content-center">
+        <div class="col col-lg-1 col-4 mobile-bike">
+           <img class="wd-img" id="estacionamiento" src="assets/image/img1.png" alt="estacionamiento">
+        </div>
+        <div class="col-md-auto col-4 mobile-bike">
+           <a href=""><img class="wd-img" src="assets/image/img2.png" alt="servicio tecnico"></a>
+        </div>
+        <div class="col col-lg-1 col-4   mobile-bike">
+          <a href=""><img class="wd-img" src="assets/image/img3.png" alt="bici disponible"></a>
+        </div>
+    </div>
+	
+	<div id="map"></div>
 	</main>
 	<!--========= FOOTER ==========-->
 	<footer class="container-fluid bg-red p-0 position-absolute">
@@ -109,9 +114,10 @@
 	 crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
 	 crossorigin="anonymous"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD48ENVcJqHONouAUVTC77TPgzIdvagJkY&callback=initMap"
-		async defer></script>
-		<script src="js/map.js"></script>
+	 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4C7p-SUpGda5c4bmHN7MTtBSDnhRpWGQ&callback=initMap&libraries=places"></script>
+
+
+		<script src="js/home.js"></script>
 </body>
 
 </html>
