@@ -19,7 +19,7 @@
       firebase.auth().signInWithPopup(provider).then(function(result) {
         user = result.user;
         console.log(user);  
-        window.location.href = 'home.html';
+        window.location.href = 'router.html';
       });
    });
 
@@ -30,7 +30,7 @@
      user = result.user;
      console.log(user);
     
-       window.location.href = 'home.html';
+       window.location.href = 'router.html';
   });
      
    })
