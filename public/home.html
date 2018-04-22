@@ -17,6 +17,9 @@
 	<!--========= HEADER ==========-->
 	<header class="bg-red">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light bg-red">
+			<img src="assets/icons/b-icon.png" alt="Bicycle" class="bicycle-icon" width="10%">
+			
+			<!-- <div class="text-center">
 			<button class="navbar-toggler rounded-circle" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
 			 aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -26,20 +29,22 @@
 				<br>
 				<span>001</span>
 			</div> -->
-			<a class="navbar-brand text-light font-weight-bold" href="#">CYCool</a>
-			<img src="assets/icons/bicycle-icon.png" alt="Bicycle" width="10%">
+			<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+			 aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-				<div class="navbar-nav">
-					<a class="nav-item nav-link active" href="#">HOME
+				<div class="navbar-nav text-white text-center">
+					<a class="nav-item nav-link active text-white" href="#">HOME
 						<span class="sr-only">(current)</span>
 					</a>
-					<a class="nav-item nav-link" href="#">TECNICOS</a>
-					<a class="nav-item nav-link" href="#">INFO VIAL</a>
-					<a class="nav-item nav-link" href="#">TIPS PARA NOOBS</a>
-					<a class="nav-item nav-link" href="#">PARQUEO BIKE</a>
-					<a class="nav-item nav-link" href="#">GUIA POR VOZ</a>
-					<a class="nav-item nav-link" href="#">PUNTOS</a>
-					<a class="nav-item nav-link" href="#">ALQUILER</a>
+					<a class="nav-item nav-link text-white" href="#">TECNICOS</a>
+					<a class="nav-item nav-link text-white" href="#">INFO VIAL</a>
+					<a class="nav-item nav-link text-white" href="#">TIPS PARA NOOBS</a>
+					<a class="nav-item nav-link text-white" href="#">PARQUEO BIKE</a>
+					<a class="nav-item nav-link text-white" href="#">GUIA POR VOZ</a>
+					<a class="nav-item nav-link text-white" href="#">PUNTOS</a>
+					<a class="nav-item nav-link text-white" href="#">ALQUILER</a>
 				</div>
 			</div>
 		</nav>
@@ -51,7 +56,7 @@
 		<div class="col-md-4 mb-3 col-10 offset-1">
 			<div class="input-group">
 				<div class="input-group-prepend">
-					<span class="input-group-text" id="inputGroupPrepend2"><i class="fas fa-map-marker-alt"></i></span>
+					<span class="input-group-text" id="inputGroupPrepend2"><img src="assets/icons/point.png" class="img-input"></span>
 				</div>
 				<input type="text" class="form-control" id="input_going" placeholder="Ingresa origen" aria-describedby="inputGroupPrepend2"
 				 required>
@@ -60,7 +65,7 @@
 		<div class="col-md-4 mb-3 col-10 offset-1">
 			<div class="input-group">
 				<div class="input-group-prepend">
-					<span class="input-group-text" id="inputGroupPrepend2"><i class="fas fa-search"></i></span>
+					<span class="input-group-text" id="inputGroupPrepend2"><img src="assets/icons/market.png" class="img-input"></span>
 				</div>
 				<input type="text" class="form-control" id="input_destiny" placeholder="Ingresa destino" aria-describedby="inputGroupPrepend2"
 				 required>
@@ -88,8 +93,7 @@
 	<div id="map"></div>
 	</main>
 	<!--========= FOOTER ==========-->
-	
-	<footer class="container bg-red p-0">
+	<footer class="container bg-red p-0 position-absolute">
 	<ul class="d-flex justify-content-between mt-2 mb-2">
 		<li class="border-right col-4">
 			<img src="assets/icons/router-icon.png" alt="Router-icon">
