@@ -49,3 +49,12 @@ footer li {
     height: 50vh;
 }
   
+@media (max-width: 700px) {
+    .mobile-bike{
+      margin-top: 10px;
+      text-align: center;      
+    }
+    .wd-img{
+     width: 50px;
+    }
+}
