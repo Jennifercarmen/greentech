@@ -86,7 +86,8 @@ footer{
 }
 
 footer img {
-    width: 5rem;
+    width: 4rem;
+    height: 4rem;
 }   
   
 @media (max-width: 700px) {
@@ -98,20 +99,33 @@ footer img {
      width: 50px;
     }
 
+    #navbarNavAltMarkup a {
+        width: 100%;
+    }
 }
 
 @media (min-width: 700px) {
     .bicycle-icon{
         width: 70px;
     }
+
     .nav-w-100 {
-        width: 100%!important;
-    }
-    /* #navbarNavAltMarkup{
+        width: 95%!important;
         position: absolute;
-        right: 0;
-    } */
-    a .nav-item:hover {
-        background-color: rgba(222, 30, 36, 0.384);
+        right: 1rem;
+        bottom: 0.7rem;
     }
+
+    #navbarNavAltMarkup a {
+        font-size: 0.9rem;
+    }
+
+    #navbarNavAltMarkup a:hover {
+        background-color: rgba(189, 89, 93, 0.384);
+    }
+
+    footer{
+        right: 0;
+    }
+
 }
