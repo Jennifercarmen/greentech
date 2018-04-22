@@ -5,6 +5,7 @@
 .img-bike{
     width: 80px;
 }
+
 .bg-bike{
  background-color: rgb(212, 58, 63);
 }
@@ -95,5 +96,22 @@ footer img {
     }
     .wd-img{
      width: 50px;
+    }
+
+}
+
+@media (min-width: 700px) {
+    .bicycle-icon{
+        width: 70px;
+    }
+    .nav-w-100 {
+        width: 100%!important;
+    }
+    /* #navbarNavAltMarkup{
+        position: absolute;
+        right: 0;
+    } */
+    a .nav-item:hover {
+        background-color: rgba(222, 30, 36, 0.384);
     }
 }
