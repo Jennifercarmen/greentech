@@ -53,4 +53,40 @@ footer li {
     border-right: 1px solid black!important;
 }
 
-  
+.navbar-light .navbar-toggler-icon {
+    background-image: url("../assets/icons/bars-icon.png");
+}
+
+.navbar-toggler-icon {
+    width: 1.2em;
+    height: 1.3em;
+}
+
+.bicycle-icon{
+    width: 15%;
+}
+
+.img-input {
+    width: 2rem;
+}
+
+.input-group-text{
+    padding: 0!important;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.form-control{
+    border: 1px solid black;
+}
+
+footer{
+    bottom: 0;
+}
+
+footer img {
+    width: 5rem;
+}
+@media (min-width: 700px){
+    
+}
