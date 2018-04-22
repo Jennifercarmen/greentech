@@ -1,12 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Document</title>
 </head>
+
 <body>
-    <h1>hola mundo</h1>
+	<!--========= HEADER ==========-->
+	<header class="bg-red">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light bg-red">
+			<button class="navbar-toggler rounded-circle" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+			 aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- <div class="text-center">
+				<i class="fas fa-star"></i>
+				<br>
+				<span>001</span>
+			</div> -->
+			<a class="navbar-brand text-light font-weight-bold" href="#">CYCool</a>
+			<img src="assets/icons/bicycle-icon.png" alt="Bicycle" width="10%">
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-item nav-link active" href="#">HOME
+						<span class="sr-only">(current)</span>
+					</a>
+					<a class="nav-item nav-link" href="#">TECNICOS</a>
+					<a class="nav-item nav-link" href="#">INFO VIAL</a>
+					<a class="nav-item nav-link" href="#">TIPS PARA NOOBS</a>
+					<a class="nav-item nav-link" href="#">PARQUEO BIKE</a>
+					<a class="nav-item nav-link" href="#">GUIA POR VOZ</a>
+					<a class="nav-item nav-link" href="#">PUNTOS</a>
+					<a class="nav-item nav-link" href="#">ALQUILER</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!--========= MAIN ==========-->
+	<main class="container">
+	<form class="row mt-3">
+		<div class="col-md-4 mb-3 col-10 offset-1">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text" id="inputGroupPrepend2"><i class="fas fa-map-marker-alt"></i></span>
+				</div>
+				<input type="text" class="form-control" id="validationDefaultUsername" placeholder="Ingresa origen" aria-describedby="inputGroupPrepend2"
+				 required>
+			</div>
+		</div>
+		<div class="col-md-4 mb-3 col-10 offset-1">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text" id="inputGroupPrepend2"><i class="fas fa-search"></i></span>
+				</div>
+				<input type="text" class="form-control" id="validationDefaultUsername" placeholder="Ingresa destino" aria-describedby="inputGroupPrepend2"
+				 required>
+			</div>
+		</div>
+	</form>
+	<div id="map"></div>
+	<div class="text-center">
+		<a class="btn btn-danger" href="#" role="button">btn1</a>
+		<a class="btn btn-danger" href="#" role="button">btn2</a>
+		<a class="btn btn-danger" href="#" role="button">btn3</a>
+	</div>
+	</main>
+	<!--========= FOOTER ==========-->
+	
+	<footer class="container">
+	<ul>
+		<li class="border bg-grey">
+			<p class="m-0">LIBRE ACCESO</p>
+			<img src="assets/images/arrow.png" alt="arrow left">
+		</li>
+		<li class="border"></li>
+		<li class="border"></li>
+	</ul>
+</footer>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+	 crossorigin="anonymous"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD48ENVcJqHONouAUVTC77TPgzIdvagJkY&callback=initMap"
+		async defer></script>
+		<script src="js/map.js"></script>
 </body>
+
 </html>
